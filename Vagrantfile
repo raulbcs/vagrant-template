@@ -10,4 +10,8 @@ Vagrant.configure("2") do |config|
   # This shell provisioner installs librarian-puppet and runs it to install
   # puppet modules. After that it just runs puppet
   config.vm.provision :shell, :path => "provision/shell/bootstrap.sh"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 2048]
+  end
 end
