@@ -10,5 +10,5 @@ class { 'apt':
 }
 
 package { 'vim':
-  ensure => 'insalled'
+  ensure => 'installed'
 }
