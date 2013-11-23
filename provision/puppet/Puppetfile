@@ -2,3 +2,5 @@ forge "http://forge.puppetlabs.com"
 
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apt'
+mod 'apache', :git => 'git://github.com/puphpet/puppetlabs-apache.git'
+mod 'php', :git => 'git://github.com/puphpet/puppet-php.git'

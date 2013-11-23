@@ -1,5 +1,6 @@
 Exec {
-  environment => "HOME=/home/vagrant"
+  environment => "HOME=/home/vagrant",
+  path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] 
 }
 
 class { 'stdlib':
@@ -9,6 +10,7 @@ class { 'apt':
   always_apt_update => true
 }
 
-package { 'vim':
-  ensure => 'installed'
-}
+apt::ppa { 'ppa:ondrej/php5-oldstable': }
+
+import 'goodies.pp'
+import 'php.pp'
